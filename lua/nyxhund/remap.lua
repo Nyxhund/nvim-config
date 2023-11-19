@@ -1,8 +1,15 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Telescope
+local builtinTelescope = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtinTelescope.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtinTelescope.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtinTelescope.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtinTelescope.help_tags, {})
+
+-- Fugitive
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git, {})
 
+-- Harpoon
+local builtinHarpoon = require('harpoon.ui')
+vim.keymap.set('n', '<leader>ha', builtinHarpoon.toggle_quick_menu(), {})
