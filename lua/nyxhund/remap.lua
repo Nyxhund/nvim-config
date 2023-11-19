@@ -11,5 +11,12 @@ vim.keymap.set('n', '<leader>fh', builtinTelescope.help_tags, {})
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git, {})
 
 -- Harpoon
-local builtinHarpoon = require('harpoon.ui')
-vim.keymap.set('n', '<leader>ha', builtinHarpoon.toggle_quick_menu(), {})
+local harpoonUi = require('harpoon.ui')
+local harpoonMark = require('harpoon.mark')
+vim.keymap.set('n', '<leader>a', harpoonMark.add_file)
+vim.keymap.set('n', '<C-e>', harpoonUi.toggle_quick_menu)
+
+vim.keymap.set('n', '<C-h>', function() harpoonUi.nav_file(1) end)
+vim.keymap.set('n', '<C-j>', function() harpoonUi.nav_file(2) end)
+vim.keymap.set('n', '<C-k>', function() harpoonUi.nav_file(3) end)
+vim.keymap.set('n', '<C-l>', function() harpoonUi.nav_file(4) end)
