@@ -77,6 +77,7 @@ return {
             })
             require'lspconfig'.rnix.setup({})
             require'lspconfig'.pyright.setup({})
+            require'lspconfig'.tsserver.setup({})
         end
     }
 }
