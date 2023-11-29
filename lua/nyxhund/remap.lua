@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- Telescope
 local builtinTelescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtinTelescope.find_files, {})
@@ -20,3 +18,6 @@ vim.keymap.set('n', '<C-h>', function() harpoonUi.nav_file(1) end)
 vim.keymap.set('n', '<C-j>', function() harpoonUi.nav_file(2) end)
 vim.keymap.set('n', '<C-k>', function() harpoonUi.nav_file(3) end)
 vim.keymap.set('n', '<C-l>', function() harpoonUi.nav_file(4) end)
+
+-- Oil binding
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
