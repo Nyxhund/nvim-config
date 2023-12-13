@@ -33,4 +33,5 @@ vim.opt.swapfile = false
 
 vim.opt.mouse = a
 vim.opt.list = true
+vim.opt.wrap = false
 vim.opt.listchars = { trail = "·" }
