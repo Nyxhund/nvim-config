@@ -9,15 +9,16 @@ vim.keymap.set('n', '<leader>fh', builtinTelescope.help_tags, {})
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git, {})
 
 -- Harpoon
-local harpoonUi = require('harpoon.ui')
-local harpoonMark = require('harpoon.mark')
-vim.keymap.set('n', '<leader>a', harpoonMark.add_file)
-vim.keymap.set('n', '<C-e>', harpoonUi.toggle_quick_menu)
+local harpoon = require("harpoon")
+harpoon:setup()
 
-vim.keymap.set('n', '<C-h>', function() harpoonUi.nav_file(1) end)
-vim.keymap.set('n', '<C-j>', function() harpoonUi.nav_file(2) end)
-vim.keymap.set('n', '<C-k>', function() harpoonUi.nav_file(3) end)
-vim.keymap.set('n', '<C-l>', function() harpoonUi.nav_file(4) end)
+vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
+vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
+vim.keymap.set("n", "<C-j>", function() harpoon:list():select(2) end)
+vim.keymap.set("n", "<C-k>", function() harpoon:list():select(3) end)
+vim.keymap.set("n", "<C-l>", function() harpoon:list():select(4) end)
 
 -- Oil binding
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
