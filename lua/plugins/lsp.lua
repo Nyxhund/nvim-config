@@ -42,6 +42,8 @@ return {
                     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
                 })
             })
+
+            require('lsp-zero').setup{}
         end
     },
 
