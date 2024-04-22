@@ -83,6 +83,7 @@ return {
             require'lspconfig'.ansiblels.setup({})
             require'lspconfig'.hls.setup({})
             require'lspconfig'.clangd.setup{}
+            require'lspconfig'.marksman.setup{}
         end
     }
 }
