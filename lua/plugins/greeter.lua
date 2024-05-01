@@ -4,13 +4,15 @@ return {
         local alpha = require'alpha'
         local dashboard = require'alpha.themes.dashboard'
         dashboard.section.header.val = {
+            [[                                                 ]],
+            [[                                                 ]],
             [[            (  )   (   )  )                      ]],
             [[             ) (   )  (  (                       ]],
             [[             ( )  (    ) )                       ]],
             [[             _____________                       ]],
             [[            <_____________> ___                  ]],
             [[            |             |/ _ \                 ]],
-            [[            |               | | |                 ]],
+            [[            |               | | |                ]],
             [[            |               |_| |                ]],
             [[         ___|             |\___/                 ]],
             [[        /    \___________/    \                  ]],
@@ -19,6 +21,7 @@ return {
         }
         dashboard.section.buttons.val = {
             dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
+            dashboard.button( "c", "󰅚  Edit config" , ":cd ~/.config/nvim/ <CR> :Oil <CR>"),
             dashboard.button( "q", "󰅚  Quit NVIM" , ":qa<CR>"),
         }
         local handle = io.popen('fortune')
