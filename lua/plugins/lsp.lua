@@ -84,6 +84,7 @@ return {
             require'lspconfig'.hls.setup({})
             require'lspconfig'.clangd.setup{}
             require'lspconfig'.marksman.setup{}
+            require'lspconfig'.glsl_analyzer.setup{}
         end
     }
 }

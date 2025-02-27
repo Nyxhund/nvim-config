@@ -10,6 +10,7 @@ return {
                 '.docker/',
                 '.local/',
                 '.vscode/',
+                '.o$',
             }
         }
     },

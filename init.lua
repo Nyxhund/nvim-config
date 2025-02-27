@@ -12,6 +12,11 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
+vim.filetype.add { extension = { frag = "glsl" } }
+vim.filetype.add { extension = { vert = "glsl" } }
+vim.filetype.add { extension = { shd = "glsl" } }
+vim.filetype.add { extension = { glsl = "glsl" } }
+vim.filetype.add { extension = { comp = "glsl" } }
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("nyxhund")

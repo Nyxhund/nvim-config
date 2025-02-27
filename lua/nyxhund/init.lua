@@ -35,3 +35,5 @@ vim.opt.mouse = a
 vim.opt.list = true
 vim.opt.wrap = false
 vim.opt.listchars = { trail = "·" }
+
+vim.opt.clipboard="unnamed,unnamedplus"
