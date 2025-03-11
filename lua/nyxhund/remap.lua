@@ -22,3 +22,7 @@ vim.keymap.set("n", "<C-l>", function() harpoon:list():select(4) end)
 
 -- Oil binding
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Quick fix list
+vim.keymap.set("n", "<C-n>", "<CMD>cn<CR>")
+vim.keymap.set("n", "<C-p>", "<CMD>cp<CR>")
